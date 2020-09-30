@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tempo_Neah</string>
+    <string name="tempo">tempo</string>
+    <string name="cal">Calendar</string>
+    <string name="notes">Notes</string>
+    <string name="chklst">Checklists</string>
+    <string name="exp">Expenses</string>
+    <string name="pomo">Pomodoro</string>
+    <string name="search">Search</string>
+    <string name="categories">Categories</string>
+    <string name="schedTasks">Scheduled Tasks</string>
+    <string name="otherTasks">Other Tasks</string>
+    <string name="large_text"></string>
+    <string name="title_activity_pomodoro2">PomodoroActivity2</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>
