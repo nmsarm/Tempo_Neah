@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,74 +10,79 @@
     android:layout_marginRight="20dp"
     tools:context=".NotesActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/quicksand_bold"
-        android:gravity="center"
-        android:text="@string/tempo"
-        android:textColor="#000"
-        android:textSize="20sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/quicksand_bold"
-        android:text="@string/notes"
-        android:textColor="#000"
-        android:textSize="23sp" />
-    <TextView
-        android:id="@+id/dateTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:fontFamily="@font/quicksand"
-        android:text="Date and Time"
-        android:textColor="#000"
-        android:textSize="12sp" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-
-        <EditText
-            android:id="@+id/searchChklst"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:text="@string/tempo"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:autofillHints="@string/search"
-            android:background="@drawable/searchb"
-            android:ellipsize="end"
-            android:ems="20"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/notes"
+            android:textColor="#000"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="@font/quicksand"
-            android:hint="@string/search"
-            android:inputType=""
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:textSize="16sp" />
+            android:text="Date and Time"
+            android:textColor="#000"
+            android:textSize="12sp" />
 
-        <ImageButton
-            android:id="@+id/searchIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/search"
-            android:src="@drawable/ic_search" />
-    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/searchChklst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="@string/search"
+                android:background="@drawable/searchb"
+                android:ellipsize="end"
+                android:ems="20"
+                android:fontFamily="@font/quicksand"
+                android:hint="@string/search"
+                android:inputType=""
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/searchIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/search"
+                android:src="@drawable/ic_search" />
+        </RelativeLayout>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -236,12 +241,40 @@
                 app:elevation="10dp"
                 app:srcCompat="@drawable/ic_add" />
 
+            <RelativeLayout
+                android:layout_width="395dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <!--    bot nav bar-->
+                <com.luseen.spacenavigation.SpaceNavigationView
+                    android:id="@+id/bottMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    app:active_centre_button_background_color="@color/color8"
+                    app:active_centre_button_icon_color="@color/colorPrimaryDarkGrey"
+                    app:active_item_color="@color/color8"
+                    app:centre_button_color="@color/colorPrimaryDarkGrey"
+                    app:centre_button_icon="@drawable/ic_check"
+                    app:inactive_centre_button_icon_color="@color/white"
+                    app:inactive_item_color="@color/colorPrimaryDarkGrey"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:space_background_color="@color/colorPrimaryGrey"
+                    app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+                    app:space_item_icon_size="20dp" />
+
+                <!--    bot nav bar-->
+            </RelativeLayout>
+
         </RelativeLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 
 
 
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

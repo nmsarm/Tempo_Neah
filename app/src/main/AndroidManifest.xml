@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".PomodoroActivity2"
+            android:name=".PomodoroActivity"
             android:label="@string/title_activity_pomodoro2">
         </activity>
 
@@ -21,7 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".NotesActivity" />
-        <activity android:name=".PomodoroActivity" />
     </application>
 
 </manifest>
