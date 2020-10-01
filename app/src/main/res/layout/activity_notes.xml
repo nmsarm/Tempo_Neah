@@ -73,7 +73,7 @@
                 android:layout_marginRight="20dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/search"
-               android:srcCompat="@drawable/ic_search" />
+                app:srcCompat="@drawable/ic_search" />
         </RelativeLayout>
 
 
