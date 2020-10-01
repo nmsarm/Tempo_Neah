@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,45 +10,38 @@
     android:layout_marginRight="20dp"
     tools:context=".NotesActivity">
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:text="@string/tempo"
+        android:textColor="#000"
+        android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/quicksand_bold"
-            android:gravity="center"
-            android:text="@string/tempo"
-            android:textColor="#000"
-            android:textSize="20sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/notes"
+        android:textColor="#000"
+        android:textSize="23sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="@string/notes"
-            android:textColor="#000"
-            android:textSize="23sp" />
+     <TextView
+         android:id="@+id/dateTime"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="10dp"
+         android:layout_marginLeft="10dp"
+         android:fontFamily="@font/quicksand"
+         android:text="Date and Time"
+         android:textColor="#000"
+         android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/dateTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:fontFamily="@font/quicksand"
-            android:text="Date and Time"
-            android:textColor="#000"
-            android:textSize="12sp" />
-
-        <RelativeLayout
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
@@ -80,201 +73,189 @@
                 android:layout_marginRight="20dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/search"
-                android:src="@drawable/ic_search" />
+               android:srcCompat="@drawable/ic_search" />
         </RelativeLayout>
 
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/notes_cardView"
-                android:layout_width="300dp"
-                android:layout_height="110dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="39dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="409dp"
-                android:backgroundTint="@color/color5"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintVertical_bias="0.33">
-
-                <TextView
-                    android:id="@+id/notes_cvText"
-                    android:layout_width="71dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginEnd="171dp"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:text="Notes"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/notes_cvText2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="70dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="30"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
-            </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/notes_cardView2"
-                android:layout_width="300dp"
-                android:layout_height="110dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="39dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="272dp"
-                android:backgroundTint="@color/color9"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintVertical_bias="0.33">
-
-                <TextView
-                    android:id="@+id/notes_cvText3"
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginEnd="171dp"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:text="Reminders"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/notes_cvText4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="70dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="13"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/notes_cardView3"
-                android:layout_width="300dp"
-                android:layout_height="110dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="31dp"
-                android:layout_marginBottom="125dp"
-                android:backgroundTint="@color/color7"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintVertical_bias="0.33">
-
-                <TextView
-                    android:id="@+id/notes_cvText5"
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="22dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_marginEnd="171dp"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:text="Schedules"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/notes_cvText6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="70dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="2"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="21dp"
-                android:layout_marginBottom="76dp"
-                android:backgroundTint="@color/white"
-                android:clickable="true"
-                app:elevation="10dp"
-                app:srcCompat="@drawable/ic_add" />
-
-            <RelativeLayout
-                android:layout_width="395dp"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
-                <!--    bot nav bar-->
-                <com.luseen.spacenavigation.SpaceNavigationView
-                    android:id="@+id/bottMenu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notes_cardView"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft = "true"
+                    android:layout_alignParentRight= "true"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    app:active_centre_button_background_color="@color/color8"
-                    app:active_centre_button_icon_color="@color/colorPrimaryDarkGrey"
-                    app:active_item_color="@color/color8"
-                    app:centre_button_color="@color/colorPrimaryDarkGrey"
-                    app:centre_button_icon="@drawable/ic_check"
-                    app:inactive_centre_button_icon_color="@color/white"
-                    app:inactive_item_color="@color/colorPrimaryDarkGrey"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:backgroundTint="@color/color5"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:space_background_color="@color/colorPrimaryGrey"
-                    app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
-                    app:space_item_icon_size="20dp" />
+                    app:layout_constraintVertical_bias="0.072">
 
-                <!--    bot nav bar-->
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/notes_cvText"
+                        android:layout_width="71dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="171dp"
+                        android:layout_marginRight="171dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Notes"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
 
+                    <TextView
+                        android:id="@+id/notes_cvText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="70dp"
+                        android:fontFamily="@font/quicksand"
+                        android:text="30"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notes_cardView2"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft = "true"
+                    android:layout_alignParentRight= "true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:backgroundTint="@color/color9"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.404">
+
+                    <TextView
+                        android:id="@+id/notes_cvText3"
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="171dp"
+                        android:layout_marginRight="171dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Reminders"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/notes_cvText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="70dp"
+                        android:fontFamily="@font/quicksand"
+                        android:text="13"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notes_cardView3"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft = "true"
+                    android:layout_alignParentRight= "true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:backgroundTint="@color/color7"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.734">
+
+                    <TextView
+                        android:id="@+id/notes_cvText5"
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginEnd="171dp"
+                        android:layout_marginRight="171dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Schedules"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/notes_cvText6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="70dp"
+                        android:fontFamily="@font/quicksand"
+                        android:text="2"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    app:elevation="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.949"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.832"
+                    app:srcCompat="@drawable/ic_add" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </RelativeLayout>
 
-    </LinearLayout>
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
